@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheBartendingApp.Views.SearchDrinkNamePage"
+             Title="SearchDrinkNamePage">
+    <VerticalStackLayout
+        Padding="10"
+        >
+        <SearchBar
+            Placeholder="Enter drink name here"
+            PlaceholderColor="AliceBlue"
+            x:Name="DrinkSearch"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button
+            Clicked="OnClickedGetDrink"
+            Text="Search"
+            HorizontalOptions="Center"></Button>
+    
+            
+    </VerticalStackLayout>
+</ContentPage>

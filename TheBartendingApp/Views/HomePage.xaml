@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheBartendingApp.HomePage"
+             Title="HomePage">
+    <VerticalStackLayout>
+        <Image
+            Source="modernbar.jpeg"
+            HeightRequest="180"
+            HorizontalOptions="CenterAndExpand"></Image>
+        <Label 
+            Text="Home"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button
+            Text="Search cocktail library"
+            Clicked="OnClickedDrinkSearch"></Button>
+        <Label
+            Text="My ingredients button here"></Label>
+        
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheBartendingApp.Views.SearchDrinkNameBindingPage"
+             Title="SearchDrinkNameBindingPage">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label
+                Text="Search Results"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontSize="Header"></Label>
+            <ListView ItemsSource="{Binding Adrinklist}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid
+                                RowDefinitions="150,50,250"
+                                ColumnDefinitions="200,200"
+                                Padding="10"
+                                RowSpacing="5"
+                                ColumnSpacing="10"
+                                >
+
+                                <Label
+                                    Grid.ColumnSpan="2"
+                                    Grid.Row="0"                                                                      
+                                    Text="{Binding name}"
+                                    FontSize="40"></Label>
+                                
+                                <Label
+                                     Grid.Row="2"
+                                    Grid.Column="0"
+                                    Text="{Binding ingredientString}"
+                                    FontAutoScalingEnabled="True"
+                                     FontSize="15"></Label>
+                                <Label
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        Text="Ingredients"
+                                        FontSize="25"></Label>
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Text="Instructions"
+                                    FontSize="25"></Label>
+                                <Label
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    Text="{Binding instructions}"
+                                    FontSize="15"></Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>  
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
